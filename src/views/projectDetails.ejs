@@ -1,0 +1,42 @@
+<!-- views/projectDetail.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= project.name %> Issues</title>
+</head>
+<body>
+  <h1><%= project.name %> Issues</h1>
+  
+  <!-- Filter Form -->
+  <form action="/projects/<%= project.id %>" method="get">
+    <label for="labels">Filter by Labels:</label>
+    <input type="text" id="labels" name="labels" placeholder="Enter labels">
+    
+    <label for="author">Filter by Author:</label>
+    <input type="text" id="author" name="author" placeholder="Enter author">
+
+    <label for="search">Search by Title or Description:</label>
+    <input type="text" id="search" name="search" placeholder="Enter search term">
+
+    <button type="submit">Apply Filters</button>
+  </form>
+
+  <!-- Display Filtered Issues -->
+  <ul>
+    <% issues.forEach(issue => { %>
+      <li>
+        <strong><%= issue.title %></strong> - <%= issue.description %>
+        <br>
+        Labels: <%= issue.labels.join(', ') %>
+        <br>
+        Author: <%= issue.author %>
+      </li>
+    <% }); %>
+  </ul>
+
+  <br>
+  <a href="/">Back to Home</a>
+</body>
+</html>
