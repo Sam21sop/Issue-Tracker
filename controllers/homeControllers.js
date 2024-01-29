@@ -1,6 +1,6 @@
 import projectModel from "../models/projectModel.js";
 
-export const homeController = async (req, res) => {
+const homeController = async (req, res) => {
   try {
     const projects = await projectModel.find();
     res.render("home", { projects });
@@ -8,3 +8,5 @@ export const homeController = async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 };
+
+export default homeController;
