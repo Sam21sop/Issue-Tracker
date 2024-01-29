@@ -1,4 +1,5 @@
-import { projectModel } from "../models/projectModel.js";
+import projectModel from "../models/projectModel.js";
+
 
 export const homeController = async (req, res) => {
   try {

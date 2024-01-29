@@ -21,5 +21,5 @@ const issueSchema = new Schema({
     }
 });
 
-
-export const issueModel = model("Issue", issueSchema);
+const issueModel = model("Issue", issueSchema);
+export default issueModel;

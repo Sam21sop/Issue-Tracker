@@ -1,5 +1,5 @@
-import { projectModel } from "../models/projectModel.js";
-import { issueModel } from "../models/issueModel.js";
+import projectModel from "../models/projectModel.js";
+import issueModel from "../models/issueModel.js";
 
 export const createProjectForm = (req, res) => {
   res.render('createProject');
