@@ -1,23 +1,19 @@
 # Issue-Tracker
 Nodejs + ejs  application to track issues/bugs for a project
 
-
 ## Project Folder Structure
-image here
+![home page](./src/public/folderStructure.JPG)
 
 ## Front-End
 
-#### Home Page
-image here
+#### Project Details Page
+![home page](./src/public/home.JPG)
 
 #### Create Project Page
-image here
-
-#### Project Details Page
-image here
+![Create Project](./src/public/createProject.JPG)
 
 #### Create Issue Page
-image here
+![Create Issues](./src/public/issueDetails.JPG)
 
 
 ## Back-End
@@ -46,6 +42,8 @@ image here
     - METHOD: GET POST (ProjectDetails, CreateProject)
 
 3. Issue Routes
-    - URL: http://localhost:${port}/issues/new-issue
-    - METHOD: GET
-
+    - URL: [
+        - http://localhost:${port}/projects/:projectId/issues
+        - http://localhost:${port}/projects/:projectId/issues/new-issue
+    ]
+    - METHOD: GET, POST (getIssues, setIssue)
