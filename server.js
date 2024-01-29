@@ -10,7 +10,6 @@ const BASE_URL = process.env.BASE_URL;
 
 
 server.listen(PORT, ()=>{
-    console.log(`server listening on http://localhost:${PORT}`);
-    // connectToDB(BASE_URL, DATABASE_NAME)
     connectToDB(BASE_URL)
+    console.log(`server listening on http://localhost:${PORT}`);    
 });
