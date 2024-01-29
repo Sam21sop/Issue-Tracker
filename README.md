@@ -2,18 +2,18 @@
 Nodejs + ejs  application to track issues/bugs for a project
 
 ## Project Folder Structure
-![home page](./src/public/folderStructure.JPG)
+![home page](./public/folderStructure.JPG)
 
 ## Front-End
 
 #### Project Details Page
-![home page](./src/public/home.JPG)
+![home page](.public/home.JPG)
 
 #### Create Project Page
-![Create Project](./src/public/createProject.JPG)
+![Create Project](./public/createProject.JPG)
 
 #### Create Issue Page
-![Create Issues](./src/public/issueDetails.JPG)
+![Create Issues](./public/issueDetails.JPG)
 
 
 ## Back-End
