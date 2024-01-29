@@ -1,12 +1,13 @@
 import { Router } from "express";
-import { createProject, createProjectForm, projectDetails } from "../controllers/projectController.js";
+import ProjectController from "../controllers/projectController.js";
 
+const projectController = new ProjectController()
 
 const projectRouter = Router();
 
-projectRouter.get('/create', createProjectForm);
-projectRouter.post('/create', createProject);
-projectRouter.get('/:projectId', projectDetails);
+projectRouter.get('/create', projectController.createProjectForm);
+projectRouter.post('/create', projectController.createProject);
+projectRouter.get('/:projectId', projectController.projectDetails);
 
 export default projectRouter;
 
