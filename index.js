@@ -1,9 +1,9 @@
 import express from 'express';
 import path from 'path';
-import { ApplicationErrorHandler } from './src/utility/errorHandling.js';
-import homeRouter from './src/routes/homeRoutes.js';
-import projectRouter from './src/routes/projectRoutes.js';
-import issueRouter from './src/routes/issueRoutes.js';
+import { ApplicationErrorHandler } from './utility/errorHandling.js';
+import homeRouter from './routes/homeRoutes.js';
+import projectRouter from './routes/projectRoutes.js';
+import issueRouter from './routes/issueRoutes.js';
 
 
 const server = express()
@@ -14,8 +14,8 @@ server.use(express.json())
 
 // set default template
 server.set("view engine", 'ejs');
-server.set("views", path.resolve(path.join("src", "views")))
-server.use(express.static(path.resolve(path.join("src", "public"))))
+server.set("views", path.resolve(path.join("views")))
+server.use(express.static(path.resolve(path.join("public"))))
 
 // server.get('/', (req, res)=> {
 //     res.render("home")
@@ -26,6 +26,6 @@ server.use('/', homeRouter);
 server.use('/projects', projectRouter);
 server.use('/projects/:projectId/issues', issueRouter);
 
-server.use(ApplicationErrorHandler)
+// server.use(ApplicationErrorHandler)
 
 export default server;
