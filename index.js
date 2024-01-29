@@ -15,6 +15,7 @@ server.use(express.json())
 // set default template
 server.set("view engine", 'ejs');
 server.set("views", path.resolve(path.join("src", "views")))
+server.use(express.static(path.resolve(path.join("src", "public"))))
 
 // server.get('/', (req, res)=> {
 //     res.render("home")

@@ -4,36 +4,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./home.css" />
     <title>Issue Tracker - Home</title>
   </head>
   <body>
-    <h1>List of Projects</h1>
-    <ul>
-      <% projects.forEach(project => { %>
-      <li><a href="/projects/<%= project.id %>"><%= project.name %></a></li>
-      <% }); %>
-    </ul>
-    <a href="/projects/create">Create New Project</a>
+    <div class="container">
+      <h1 class="title">List of Projects</h1>
+      <div class="project-table-list">
+        <table>
+          <thead>
+            <tr>
+              <th>Project Name</th>
+              <th>Description</th>
+              <th>Author</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% projects.forEach(project => { %>
+              <tr>
+                <th><a href="/projects/<%= project.id %>"><%= project.name %></a></th>
+                <th><%= project.description %></th>
+                <th><%= project.author %></th>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+      <div class="new-project">
+          <a href="/projects/create" >Create New Project</a>
+      </div>
+    </div>
   </body>
 </html>
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../public/style.css">
-    <title>Issue Tracker</title>
-  </head>
-  <body>
-    <h1>List of Projects</h1>
-    <ul>
-        <li><a href="#">Project Name 1</a></li>
-        <li><a href="#">Project Name 2</a></li>
-        <li><a href="#">Project Name 3</a></li>
-    </ul>
-    <a href="#">Create New Project</a>
-  </body>
-</html> -->
