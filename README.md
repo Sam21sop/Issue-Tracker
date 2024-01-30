@@ -7,7 +7,7 @@ Nodejs + ejs  application to track issues/bugs for a project
 ## Front-End
 
 #### Project Details Page
-![home page](.public/home.JPG)
+![home page](./public/home.JPG)
 
 #### Create Project Page
 ![Create Project](./public/createProject.JPG)
