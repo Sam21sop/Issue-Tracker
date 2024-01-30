@@ -1,4 +1,5 @@
 import issueModel from "../models/issueModel.js";
+import projectModel from "../models/projectModel.js";
 
 class ProjectController {
   createProjectForm = (req, res) => {
