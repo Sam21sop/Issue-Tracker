@@ -1,4 +1,3 @@
-import projectModel from "../models/projectModel.js";
 import issueModel from "../models/issueModel.js";
 
 class ProjectController {
